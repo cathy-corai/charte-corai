@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>corai, test Zain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700&family=Instrument+Sans:wght@400;500&family=Figtree:wght@400;500&family=Atkinson+Hyperlegible+Next:wght@400;500&family=Atkinson+Hyperlegible+Mono&family=Geist+Mono&display=swap">
+<style>
+:root{--ard:#1E2531;--ard2:#252D3B;--gc:#F1F2F4;--ink:#0D1017;--ink2:#454C59;--tx:#F2F3F5;--tx2:#B9C0CC;--co:#FF7A63;--cot:#FF8A75;--cod:#B5341D;
+--body:"Instrument Sans";--mono:"Geist Mono";--tw:700}
+html[data-texte="figtree"]{--body:"Figtree"}
+html[data-texte="atkinson"]{--body:"Atkinson Hyperlegible Next";--mono:"Atkinson Hyperlegible Mono"}
+html[data-titres="400"]{--tw:400}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ard);color:var(--tx);font-family:var(--body),system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--co);color:#1A0B07}
+h1,h2,h3{font-family:Zain,sans-serif;font-weight:var(--tw);letter-spacing:-.01em;line-height:.98;text-wrap:balance}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+.band{padding:88px 0}
+.dk{background:var(--ard);color:var(--tx)}
+.lt{background:var(--gc);color:var(--ink)}
+.lt .muted{color:var(--ink2)}.dk .muted{color:var(--tx2)}
+.mono{font-family:var(--mono),ui-monospace,monospace;font-size:14px;letter-spacing:0}
+header{padding:56px 0 64px}
+header img{height:40px;display:block}
+header h1{font-size:clamp(52px,8vw,104px);margin-top:64px;max-width:12ch}
+header p{font-size:21px;max-width:58ch;margin-top:24px}
+/* control bar */
+.bar{position:sticky;top:0;z-index:10;background:rgba(30,37,49,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(242,243,245,.1)}
+.bar .w{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding-top:12px;padding-bottom:12px}
+.grp{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.grp span{font-size:15px;color:var(--tx2);margin-right:6px}
+.grp button{font:500 16px var(--body),sans-serif;color:var(--tx);background:transparent;border:0;border-radius:8px;padding:9px 14px;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(242,243,245,.22);transition:background .15s}
+.grp button:hover{background:rgba(242,243,245,.08)}
+.grp button[aria-pressed="true"]{background:var(--co);color:#1A0B07;box-shadow:none}
+.grp button:focus-visible{outline:2px solid var(--co);outline-offset:2px}
+.now{margin-left:auto;font-size:15px;color:var(--tx2)}
+@media(max-width:720px){.now{display:none}.grp button{font-size:15px;padding:8px 11px}}
+/* sections */
+h2{font-size:clamp(40px,5.4vw,68px);max-width:16ch}
+.lead{font-size:19px;max-width:60ch;margin-top:18px}
+.spec{margin-top:48px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start}
+.spec .big{font-family:Zain,sans-serif;font-weight:var(--tw);font-size:clamp(46px,5.6vw,80px);line-height:.98}
+.spec .big b{color:var(--cod);font-weight:inherit}
+.spec p{font-size:19px;max-width:52ch}
+.spec .num{font-family:Zain,sans-serif;font-weight:var(--tw);font-size:56px;line-height:1;color:var(--cod)}
+.spec .stack{display:grid;gap:18px}
+.btn{display:inline-block;background:var(--cod);color:#fff;font-weight:500;border-radius:8px;padding:14px 22px;text-decoration:none;justify-self:start}
+@media(max-width:860px){.spec{grid-template-columns:1fr;gap:28px}}
+.shots{margin-top:44px;display:grid;gap:24px}
+.shots img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 24px 50px -24px rgba(0,0,0,.55)}
+.lt .shots img{box-shadow:0 24px 50px -24px rgba(13,16,23,.35)}
+.s1{grid-template-columns:minmax(0,520px);justify-content:center}
+.s3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.s2{grid-template-columns:minmax(0,560px);justify-content:center}
+@media(max-width:860px){.s3{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+table{width:100%;border-collapse:collapse;margin-top:40px;font-size:17px}
+th,td{text-align:left;vertical-align:top;padding:16px 14px;border-top:1px solid rgba(13,16,23,.12)}
+th{font-weight:500}
+td:first-child{font-family:Zain,sans-serif;font-weight:var(--tw);font-size:24px;line-height:1.1;white-space:nowrap}
+tr.reco td{background:#fff}
+@media(max-width:720px){table,tbody,tr,td,th,thead{display:block}thead{display:none}td{border:0;padding:6px 0}tr{border-top:1px solid rgba(13,16,23,.12);padding:16px 0}}
+footer{padding:48px 0 64px;font-size:15px}
+</style>
+</head>
+<body>
+<header class="dk"><div class="w">
+ <img src="lw600.png" alt="corai by Baker Park">
+ <h1>Zain en titres. Quelle police de texte&nbsp;?</h1>
+ <p class="muted">Trois duos gratuits sur les mêmes contenus : un post LinkedIn, un carrousel, une page de lead magnet, une slide et un en-tête de newsletter. Choisissez le duo et le gras des titres dans la barre : toute la page change.</p>
+</div></header>
+
+<div class="bar"><div class="w">
+ <div class="grp" role="group" aria-label="Police de texte"><span>Texte</span>
+  <button type="button" data-texte="instrument">Instrument Sans</button><button type="button" data-texte="figtree">Figtree</button><button type="button" data-texte="atkinson">Atkinson</button></div>
+ <div class="grp" role="group" aria-label="Gras des titres"><span>Titres</span>
+  <button type="button" data-titres="700">Gras</button><button type="button" data-titres="400">Normal</button></div>
+ <p class="now" id="now"></p>
+</div></div>
+
+<section class="band lt"><div class="w">
+ <h2>Le duo en texte réel.</h2>
+ <div class="spec">
+  <div class="stack"><p class="big"><b>11&nbsp;200&nbsp;heures</b> rendues chaque année aux équipes de Sofinco.</p>
+   <p class="muted">Des agents IA construits pour les processus de chaque équipe, mis en production, puis suivis. Ce qui ne sert pas s'arrête, et vous ne le payez plus.</p></div>
+  <div class="stack"><span class="num">Plus de 95&nbsp;%</span><p>des agents mis en production.</p>
+   <p class="mono muted">Source : cas client Sofinco, groupe Crédit Agricole</p><a class="btn" href="#post">Voir les formats</a></div>
+ </div>
+</div></section>
+
+<section class="band dk" id="post"><div class="w">
+ <h2>Post LinkedIn.</h2><p class="lead muted">Un chiffre sourcé, un visage, rien d'autre. Regardez-le aussi sur votre téléphone.</p>
+ <div class="shots s1"><img data-f="1-post-linkedin" alt="Post LinkedIn"></div>
+</div></section>
+
+<section class="band lt"><div class="w">
+ <h2>Carrousel.</h2><p class="lead muted">Couverture, page intérieure, dernière page. Le code des points se lit avec sa légende.</p>
+ <div class="shots s3"><img data-f="2a-carrousel-couverture" alt="Carrousel, couverture"><img data-f="2b-carrousel-interieur" alt="Carrousel, page intérieure"><img data-f="2c-carrousel-fin" alt="Carrousel, dernière page"></div>
+</div></section>
+
+<section class="band dk"><div class="w">
+ <h2>Page de lead magnet.</h2><p class="lead muted">Le texte long : c'est là que la police de texte compte le plus.</p>
+ <div class="shots s2"><img data-f="3-pdf-page" alt="Page PDF du référentiel"></div>
+</div></section>
+
+<section class="band lt"><div class="w">
+ <h2>Slide.</h2>
+ <div class="shots"><img data-f="4-slide" alt="Slide méthode"></div>
+</div></section>
+
+<section class="band dk"><div class="w">
+ <h2>En-tête de newsletter.</h2>
+ <div class="shots"><img data-f="5-newsletter" alt="En-tête newsletter IA QUOI ?"></div>
+</div></section>
+
+<section class="band lt"><div class="w">
+ <h2>Notre lecture des trois duos.</h2>
+ <table><thead><tr><th>Duo</th><th>Effet</th><th>Pour qui</th><th>Point faible</th></tr></thead><tbody>
+  <tr class="reco"><td>Zain + Instrument Sans</td><td>Contraste net : titres chaleureux, texte précis. Recommandé.</td><td>Le meilleur équilibre DG, DSI, Head of AI et métiers</td><td>Le texte seul est sobre</td></tr>
+  <tr><td>Zain + Figtree</td><td>Harmonie : tout est rond et doux</td><td>Le plus humain, idéal pour les métiers</td><td>Moins de tenue face à un DSI</td></tr>
+  <tr><td>Zain + Atkinson</td><td>Lisibilité maximale en petite taille</td><td>Pensé pour les lecteurs qui peinent à lire</td><td>Le moins élégant</td></tr>
+ </tbody></table>
+ <p class="lead muted">Gras ou normal&nbsp;? Notre piste : titres en gras pour LinkedIn, en normal pour les documents et les slides.</p>
+</div></section>
+
+<footer class="dk"><div class="w"><p style="font-size:19px;margin-bottom:14px">La charte complète en PDF&nbsp;: <a href="charte-corai-zain-instrument.pdf" style="color:var(--cot)">Zain + Instrument Sans</a> · <a href="charte-corai-zain-figtree.pdf" style="color:var(--cot)">Zain + Figtree</a> · <a href="charte-corai-zain-atkinson.pdf" style="color:var(--cot)">Zain + Atkinson</a></p><p class="muted">Proposition de travail, non validée. Polices gratuites (Google Fonts). Chiffres : cas client Sofinco et promesse de mise en production de corai. Les points du carrousel sont un exemple.</p></div></footer>
+
+<script>
+(function(){
+ var root=document.documentElement, st={texte:"instrument",titres:"700"};
+ var names={instrument:"Zain + Instrument Sans",figtree:"Zain + Figtree",atkinson:"Zain + Atkinson Hyperlegible Next"};
+ try{var u=new URL(location.href);if(names[u.searchParams.get("texte")])st.texte=u.searchParams.get("texte");if(["700","400"].indexOf(u.searchParams.get("titres"))>-1)st.titres=u.searchParams.get("titres");}catch(e){}
+ function apply(){
+  root.setAttribute("data-texte",st.texte);root.setAttribute("data-titres",st.titres);
+  document.querySelectorAll("img[data-f]").forEach(function(i){i.src="img/"+st.texte+"-"+st.titres+"-"+i.getAttribute("data-f")+".jpg";});
+  document.querySelectorAll(".grp button").forEach(function(b){var k=b.dataset.texte?"texte":"titres";b.setAttribute("aria-pressed",String(b.dataset[k]===st[k]));});
+  document.getElementById("now").textContent=names[st.texte]+(st.titres==="700"?" · titres gras":" · titres normaux");
+  try{var u=new URL(location.href);u.searchParams.set("texte",st.texte);u.searchParams.set("titres",st.titres);history.replaceState(null,"",u);}catch(e){}
+ }
+ document.querySelectorAll(".grp button").forEach(function(b){b.addEventListener("click",function(){if(b.dataset.texte)st.texte=b.dataset.texte;else st.titres=b.dataset.titres;apply();});});
+ apply();
+})();
+</script>
+</body>
+</html>
